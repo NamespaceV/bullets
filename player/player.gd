@@ -12,3 +12,6 @@ func _physics_process(delta: float) -> void:
 	move_and_collide(dir*delta*speed)
 	if Input.is_action_just_pressed("shoot"):
 		var bullet = Bullet.create_for_player(self)
+
+func hit_by_bullet(b : Bullet) -> void:
+	b.queue_free()

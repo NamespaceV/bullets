@@ -1,7 +1,10 @@
 class_name Enemy
-extends RigidBody2D
+extends Area2D
 
-@export var speed := 400.0
+@export var speed := 200.0
+
+@export var sin_speed_pct := 2
+@export var sin_period := 1
 
 func _ready() -> void:
 	pass # Replace with function body.
@@ -9,5 +12,10 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	var dir = Vector2(-1,0)
-	dir.y = sin(Time.get_unix_time_from_system()*5)
-	move_and_collide(dir*speed*delta)
+	dir.y = sin_speed_pct * sin(Time.get_unix_time_from_system() * 2 * PI / sin_period)
+	position += dir*speed*delta
+
+
+func hit_by_bullet(b : Bullet) -> void:
+	b.queue_free()
+	queue_free()
