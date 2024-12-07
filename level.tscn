@@ -1,8 +1,56 @@
-[gd_scene load_steps=2 format=3 uid="uid://kb1lqqd7qjlg"]
+[gd_scene load_steps=3 format=3 uid="uid://kb1lqqd7qjlg"]
 
-[ext_resource type="PackedScene" uid="uid://cbwl4yjieqor1" path="res://player.tscn" id="1_y2src"]
+[ext_resource type="PackedScene" uid="uid://cbwl4yjieqor1" path="res://player/player.tscn" id="1_y2src"]
+[ext_resource type="PackedScene" uid="uid://mg37vvgiobhf" path="res://enemy/enemy.tscn" id="2_m6o6v"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_y2src")]
-position = Vector2(606, 293)
+position = Vector2(252, 468)
+
+[node name="Wave 1" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Wave 1" instance=ExtResource("2_m6o6v")]
+position = Vector2(1544, 462)
+
+[node name="Enemy2" parent="Wave 1" instance=ExtResource("2_m6o6v")]
+position = Vector2(2047, 578)
+
+[node name="Enemy3" parent="Wave 1" instance=ExtResource("2_m6o6v")]
+position = Vector2(2437, 366)
+
+[node name="Enemy4" parent="Wave 1" instance=ExtResource("2_m6o6v")]
+position = Vector2(2751, 708)
+
+[node name="Enemy5" parent="Wave 1" instance=ExtResource("2_m6o6v")]
+position = Vector2(3189, 380)
+
+[node name="Enemy6" parent="Wave 1" instance=ExtResource("2_m6o6v")]
+position = Vector2(3350, 702)
+
+[node name="Enemy7" parent="Wave 1" instance=ExtResource("2_m6o6v")]
+position = Vector2(3658, 227)
+
+[node name="Wave 2" type="Node2D" parent="."]
+position = Vector2(2586, 0)
+
+[node name="Enemy" parent="Wave 2" instance=ExtResource("2_m6o6v")]
+position = Vector2(2056, 170)
+
+[node name="Enemy2" parent="Wave 2" instance=ExtResource("2_m6o6v")]
+position = Vector2(2047, 578)
+
+[node name="Enemy3" parent="Wave 2" instance=ExtResource("2_m6o6v")]
+position = Vector2(2145, 366)
+
+[node name="Enemy4" parent="Wave 2" instance=ExtResource("2_m6o6v")]
+position = Vector2(2136, 775)
+
+[node name="Enemy5" parent="Wave 2" instance=ExtResource("2_m6o6v")]
+position = Vector2(2444, 461)
+
+[node name="Enemy6" parent="Wave 2" instance=ExtResource("2_m6o6v")]
+position = Vector2(2668, 460)
+
+[node name="Enemy7" parent="Wave 2" instance=ExtResource("2_m6o6v")]
+position = Vector2(2881, 465)
