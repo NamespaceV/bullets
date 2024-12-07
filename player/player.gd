@@ -13,5 +13,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("shoot"):
 		var bullet = Bullet.create_for_player(self)
 
+
 func hit_by_bullet(b : Bullet) -> void:
 	b.queue_free()
+	GUI.player_got_hit(10)
