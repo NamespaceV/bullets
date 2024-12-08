@@ -20,3 +20,8 @@ func hit_by_bullet(b : Bullet) -> void:
 	b.queue_free()
 	queue_free()
 	GUI.enemy_died(10)
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if (body as Player):
+		(body as Player).hit_by_enemy(self)

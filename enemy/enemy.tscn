@@ -32,3 +32,5 @@ script = ExtResource("2_h8gar")
 position = Vector2(-28, 28)
 rotation = -2.35619
 script = ExtResource("2_h8gar")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -25,9 +25,9 @@ static func create_for_enemy(enemy_cannon:Node2D) -> Bullet:
 
 
 func _physics_process(delta: float) -> void:
-	var fwd = global_transform.basis_xform(Vector2(0,-1)) 
+	var fwd = global_transform.basis_xform(Vector2(0,-1))
 	position += (fwd*speed*delta)
-	
+
 	var offset = 100
 	var screen = get_viewport().get_visible_rect().size
 	if position.x < -offset or position.x > screen.x + offset \

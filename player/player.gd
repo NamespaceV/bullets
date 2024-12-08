@@ -17,3 +17,6 @@ func _physics_process(delta: float) -> void:
 func hit_by_bullet(b : Bullet) -> void:
 	b.queue_free()
 	GUI.player_got_hit(10)
+
+func hit_by_enemy(_e : Enemy) -> void:
+	GUI.player_got_hit(10)
